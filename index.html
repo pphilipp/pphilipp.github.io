@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MichaSite</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="scripts/JsTest.js"></script>	
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/fontello-embedded.css">		
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+<!-- =========================== google-maps api ================================== -->
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+      <script type="text/javascript">
+	      var map;	      
+	      var MY_MAPTYPE_ID = 'моя карта';
+	    function initialize (map_ph,width_ph,height_ph) {
+	  	  var featureOpts = [{"stylers": [{ "hue": "#00ccff"}]}];//стили карты
+	      var oz = new google.maps.LatLng(width_ph,height_ph);
+	      var mapOptions = {
+	        zoom: 17,
+	        scrollwheel: false,
+	        center: oz,
+	        mapTypeControlOptions: {
+	          mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+	        },
+	        mapTypeId: MY_MAPTYPE_ID
+	      };
+	      map = new google.maps.Map(document.getElementById(map_ph),
+	        mapOptions);  	      
+	      var image = "img/mapFlag.png";
+	      var myLatLng = new google.maps.LatLng(width_ph,height_ph);
+	      var beachMarker = new google.maps.Marker({
+	          position: myLatLng,
+	          map: map,
+	          icon: image  
+	      });
+	      var styledMapOptions = {
+	        name: 'Custom Style'
+	      };
+	      var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+	      map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+	    }
+    </script>
+
+  <!-- =========================== google-maps api ================================== -->
+
+	</head>
+	<body>
+		<div class="wrapper"><!-- wraper -->			
+			<div class="header"><!-- header -->
+				<div class="headerTopHolder">
+					<div class="headerTop">
+						<div class="logo">
+							<h1><a href="#">LOGO</a></h1>
+						</div>
+
+						<ul class="nav">
+							<li><a href="#">LABLE</a></li>
+							<li><a href="#">LABLE</a></li>
+							<li><a href="#">LABLE</a></li>
+							<li><a href="#">SIGN IN</a></li>
+						</ul>
+					</div>
+				</div><!-- headerTopHolder -->
+			</div><!-- End header -->			
+			<div class="content"><!-- content -->
+				<div class="ourMission">
+					<h2 class="icon-star">Our Mission</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
+				</div><!--end oueMission -->
+				<div class="about">
+					<h2>About</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+				</div><!--end about -->
+				<div class="team">
+					<h2>Team</h2>
+					<ul>
+						<li>
+							<img src="img/photo1.png"  alt="">
+							<span>John Doe</span>
+							<span>Founder &amp; SEO</span>	
+						</li>
+						<li>
+							<img src="img/photo2.png" alt="">
+							<span>John Doe</span>
+							<span>Co-Founder</span>
+						</li>
+						<li>
+							<img src="img/photo3.png" alt="">
+							<span>John Doe</span>
+							<span>Investor</span>
+						</li>
+					</ul>
+					<a href="#" class="teamBtn">work with us</a>
+				</div><!--end team -->
+				<div class="map" id="map_ua" style="width: 100%; height: 600px;"></div><!-- google map -->
+			</div><!--end content -->
+			<footer class="footerHolder">
+				<div class="footer">
+					<ul>
+						<li>about</li>
+						<li>faq</li>
+						<li>work with us</li>
+					</ul>
+					<ul>
+						<li class="icon-mail-2 animate-spin">&nbsp;</li>
+						<li class="icon-facebook animate-spin"></li>
+						<li class="icon-twitter animate-spin"></li>
+					</ul>
+					<div class="cf"></div>
+					<div class="copyright">
+						<span>
+							<a href="#">Privacy |</a>
+							<a href="#">Terms and Conditions |</a>
+							<a href="#">&copy; Company.LLC 2014</a>
+						</span>
+					</div>
+
+				</div><!-- footer -->
+				
+			</footer>
+		</div><!-- End wraper -->
+
+		<!-- =========================== google-maps api ================================== -->
+		<script type="text/javascript">
+		    initialize('map_ua',50.011503, 36.222817); //ул.Культуры, 26, Харьков, Украина, 61058
+		</script>
+        <!-- =========================== google-maps api ================================== -->
+	</body>
+</html>
