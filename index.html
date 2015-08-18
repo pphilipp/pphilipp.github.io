@@ -1,129 +1,199 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>MichaSite</title>
-		<meta charset="utf-8">
-		<script type="text/javascript" src="scripts/JsTest.js"></script>	
-		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/fontello-embedded.css">		
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-<!-- =========================== google-maps api ================================== -->
-      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-      <script type="text/javascript">
-	      var map;	      
-	      var MY_MAPTYPE_ID = 'моя карта';
-	    function initialize (map_ph,width_ph,height_ph) {
-	  	  var featureOpts = [{"stylers": [{ "hue": "#00ccff"}]}];//стили карты
-	      var oz = new google.maps.LatLng(width_ph,height_ph);
-	      var mapOptions = {
-	        zoom: 17,
-	        scrollwheel: false,
-	        center: oz,
-	        mapTypeControlOptions: {
-	          mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
-	        },
-	        mapTypeId: MY_MAPTYPE_ID
-	      };
-	      map = new google.maps.Map(document.getElementById(map_ph),
-	        mapOptions);  	      
-	      var image = "img/mapFlag.png";
-	      var myLatLng = new google.maps.LatLng(width_ph,height_ph);
-	      var beachMarker = new google.maps.Marker({
-	          position: myLatLng,
-	          map: map,
-	          icon: image  
-	      });
-	      var styledMapOptions = {
-	        name: 'Custom Style'
-	      };
-	      var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
-	      map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
-	    }
-    </script>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Photography Website Concept</title>
+	<meta name="description" content="A photography-inspired website layout with an expanding stack slider and a background image tilt effect" />
+	<meta name="keywords" content="photography, template, layout, effect, expand, image stack, animation, flickity, tilt" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/flickity.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="hero">
+			<!-- <div class="hero__back hero__back--static"></div> -->
+			<div class="hero__back hero__back--mover"></div>
+			<div class="hero__front"></div>
+		</div>
+		<header class="codrops-header">			
+			
+			<!-- <nav class="menu">
+				<a class="menu__item" href="#"><span>About</span></a>
+				<a class="menu__item menu__item--current" href="#"><span>Work</span></a>
+				<a class="menu__item" href="#"><span>Contact</span></a>
+			</nav> -->
+		</header>
+		<div class="main_title">
+				</div>
+		<div class="stack-slider">
+			<div class="stacks-wrapper">
 
-  <!-- =========================== google-maps api ================================== -->
-
-	</head>
-	<body>
-		<div class="wrapper"><!-- wraper -->			
-			<div class="header"><!-- header -->
-				<div class="headerTopHolder">
-					<div class="headerTop">
-						<div class="logo">
-							<h1><a href="#">LOGO</a></h1>
+				<div class="stack"> <!-- About me -->
+					<h2 class="stack-title"><a href="#" data-text="About me"><span>About me</span></a></h2>
+					<div class="item">
+						<div class="item__content">
+							<img src="img/type1/1.jpg" alt="img01" />
+							<h3 class="item__title">Hoodie stumptown kitsch <span class="item__date">05/05/2015</span></h3>
+							<div class="item__details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
 						</div>
 
-						<ul class="nav">
-							<li><a href="#">LABLE</a></li>
-							<li><a href="#">LABLE</a></li>
-							<li><a href="#">LABLE</a></li>
-							<li><a href="#">SIGN IN</a></li>
-						</ul>
-					</div>
-				</div><!-- headerTopHolder -->
-			</div><!-- End header -->			
-			<div class="content"><!-- content -->
-				<div class="ourMission">
-					<h2 class="icon-star">Our Mission</h2>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
-				</div><!--end oueMission -->
-				<div class="about">
-					<h2>About</h2>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
-				</div><!--end about -->
-				<div class="team">
-					<h2>Team</h2>
-					<ul>
-						<li>
-							<img src="img/photo1.png"  alt="">
-							<span>John Doe</span>
-							<span>Founder &amp; SEO</span>	
-						</li>
-						<li>
-							<img src="img/photo2.png" alt="">
-							<span>John Doe</span>
-							<span>Co-Founder</span>
-						</li>
-						<li>
-							<img src="img/photo3.png" alt="">
-							<span>John Doe</span>
-							<span>Investor</span>
-						</li>
-					</ul>
-					<a href="#" class="teamBtn">work with us</a>
-				</div><!--end team -->
-				<div class="map" id="map_ua" style="width: 100%; height: 600px;"></div><!-- google map -->
-			</div><!--end content -->
-			<footer class="footerHolder">
-				<div class="footer">
-					<ul>
-						<li>about</li>
-						<li>faq</li>
-						<li>work with us</li>
-					</ul>
-					<ul>
-						<li class="icon-mail-2 animate-spin">&nbsp;</li>
-						<li class="icon-facebook animate-spin"></li>
-						<li class="icon-twitter animate-spin"></li>
-					</ul>
-					<div class="cf"></div>
-					<div class="copyright">
-						<span>
-							<a href="#">Privacy |</a>
-							<a href="#">Terms and Conditions |</a>
-							<a href="#">&copy; Company.LLC 2014</a>
-						</span>
-					</div>
+					</div>	<!-- END item -->				
+				</div> <!-- End stack About me-->
 
-				</div><!-- footer -->
+				<div class="stack"> <!-- My Portfolio -->
+					<h2 class="stack-title"><a href="#" data-text="My Portfolio"><span>My Portfolio</span></a></h2>
+					<div class="item">
+						<div class="item__content">
+							<img src="img/type3/1.jpg" alt="img01" />
+							<h3 class="item__title">Austin flannel salvia <span class="item__date">05/05/2015</span></h3>
+							<div class="item__details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5 mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>					
+				</div> <!-- END My Portfolio -->
+
+				<div class="stack"> <!-- My Contact -->
+					<h2 class="stack-title"><a href="#" data-text="My Contact"><span>My Contact</span></a></h2>
+					<div class="item">
+						<!-- Related demos -->
+						<div class="item__content item__content--related">
+							<p>If you enjoyed this demo you might also like:</p>
+							<a class="media-item" href="http://tympanus.net/Tutorials/SlidingHeaderLayout/">
+								<img class="media-item__img" src="img/related/SlidingHeaderLayout.jpg" />
+								<h3 class="media-item__title">Sliding Header Layout</h3>
+							</a>
+							<a class="media-item" href="http://tympanus.net/Development/ScatteredPolaroidsGallery/">
+								<img class="media-item__img" src="img/related/ScatteredPolaroidGallery.jpg" />
+								<h3 class="media-item__title">Scattered Polaroid Gallery</h3>
+							</a>
+						</div>
+					</div> <!-- END item -->
+				</div><!-- END My Contact -->
 				
-			</footer>
-		</div><!-- End wraper -->
-
-		<!-- =========================== google-maps api ================================== -->
-		<script type="text/javascript">
-		    initialize('map_ua',50.011503, 36.222817); //ул.Культуры, 26, Харьков, Украина, 61058
-		</script>
-        <!-- =========================== google-maps api ================================== -->
-	</body>
+				<div class="stack">
+					<h2 class="stack-title"><a href="#" data-text="Wildlife"><span>Wildlife</span></a></h2>
+					<div class="item">
+						<div class="item__content">
+							<img src="img/type4/1.jpg" alt="img01" />
+							<h3 class="item__title">Kickstarter keffiyeh <span class="item__date">05/05/2015</span></h3>
+							<div class="item__details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5 mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item__content">
+							<img src="img/type4/2.jpg" alt="img02" />
+							<h3 class="item__title">Heirloom commodo migas <span class="item__date">05/05/2015</span></h3>
+							<div class="item__details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5 mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item__content">
+							<img src="img/type4/3.jpg" alt="img03" />
+							<h3 class="item__title">Austin banjo swag <span class="item__date">05/05/2015</span></h3>
+							<div class="item__details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5 mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item__content">
+							<img src="img/type4/4.jpg" alt="img04" />
+							<h3 class="item__title">Small batch farm-to-table <span class="item__date">05/05/2015</span></h3>
+							<div class="item__details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5 mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item__content">
+							<img src="img/type4/5.jpg" alt="img05" />
+							<h3 class="item__title">Ethical leggings semiotics <span class="item__date">05/05/2015</span></h3>
+							<div class="item__details">
+								<ul>
+									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
+									<li><i class="icon icon-focal_length"></i><span>22.5 mm</span></li>
+									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
+									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
+									<li><i class="icon icon-iso"></i><span>80</span></li>
+								</ul>
+							</div>
+							<p>Images by <a href="https://www.flickr.com/photos/usfwsendsp/">USFWS Endangered Species</a></p>
+						</div>
+					</div>
+					<div class="item">
+						<!-- Related demos -->
+						<div class="item__content item__content--related">
+							<p>If you enjoyed this demo you might also like:</p>
+							<a class="media-item" href="http://tympanus.net/Tutorials/SlidingHeaderLayout/">
+								<img class="media-item__img" src="img/related/SlidingHeaderLayout.jpg" />
+								<h3 class="media-item__title">Sliding Header Layout</h3>
+							</a>
+							<a class="media-item" href="http://tympanus.net/Development/ScatteredPolaroidsGallery/">
+								<img class="media-item__img" src="img/related/ScatteredPolaroidGallery.jpg" />
+								<h3 class="media-item__title">Scattered Polaroid Gallery</h3>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /stacks-wrapper -->
+		</div>
+		<!-- /stacks -->
+		<img class="loader" src="img/three-dots.svg" width="60" alt="Loader image" />
+	</div>
+	<!-- /container -->
+	<!-- Flickity v1.0.0 http://flickity.metafizzy.co/ -->
+	<script src="js/flickity.pkgd.min.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/main.js"></script>
+</body>
 </html>
