@@ -357,7 +357,7 @@ button:focus {
 }
 
 .stack.is-selected .stack-title::before {
-	margin: 0 0 0 -23px;
+	margin: 0 0 0 -15px;
 	left: 50%;
 	top: 10px;
 	background: url(../img/arrow-colored.svg) no-repeat center center;
