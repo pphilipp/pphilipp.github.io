@@ -274,9 +274,8 @@ nav a.button-collapse{
 
 .card-avatar
 img{
-	height:150px;
-	width:250px;
-	
+	height:auto;
+	width:100%;	
 }
 
 .card-avatar .card-content{
