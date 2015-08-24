@@ -304,3 +304,14 @@ i{
 footer.page-footer{
 	margin-top:0px !important
 }
+.photoBlock {
+	max-width: 230px;
+	height: auto;
+	margin: 0 auto; 
+}
+.photoBlock  img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+
+}
