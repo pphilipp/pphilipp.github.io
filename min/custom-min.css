@@ -304,6 +304,17 @@ i{
 footer.page-footer{
 	margin-top:0px !important
 }
+footer .col ul li {
+	float: left;
+	margin-right: 50px; 
+}
+/*.social_block {width: 800px!important;}*/
+.cv {
+	border-radius: 5px;
+	font-size: 20px; 
+	color: #2196F3!important;
+ 	background: #fff;
+ }
 .photoBlock {
 	max-width: 230px;
 	height: auto;
